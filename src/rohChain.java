@@ -5,27 +5,27 @@ public class rohChain {
 
     public static ArrayList<block> blockchain = new ArrayList<block>();
 
-    public static int difficulty = 2;
+    public static int difficulty = 5;
 
     public static void main(String[] args){
 
-        blockchain.add(new block("1st message", "0"));
+        blockchain.add(new block("genesis", "0"));
         System.out.println("mining block 1");
-        //blockchain.get(0).mineBlock(difficulty);
+        blockchain.get(0).mineBlock(difficulty);
 
-        blockchain.add(new block("2nd message", blockchain.get(blockchain.size() - 1).hash));
-        //System.out.println("mining block 2");
-        //blockchain.get(1).mineBlock(difficulty);
+        blockchain.add(new block("adgh", blockchain.get(blockchain.size() - 1).hash));
+        System.out.println("mining block 2");
+        blockchain.get(1).mineBlock(difficulty);
 
-        blockchain.add(new block("3rd message", blockchain.get(blockchain.size() - 1).hash));
-       // System.out.println("mining block 3");
-        //blockchain.get(2).mineBlock(difficulty);
+        blockchain.add(new block("afjl", blockchain.get(blockchain.size() - 1).hash));
+        System.out.println("mining block 3");
+        blockchain.get(2).mineBlock(difficulty);
 
-        //System.out.println("\n chain valid? " + isChainValid());
+        System.out.println("\n chain valid? " + isChainValid());
 
-       // String blockchainJson = new GsonBuilder().setPrettyPrinting().create().toJson(blockchain);
-       // System.out.println("json version of blockchain? idk figuring this out atm.");
-       // System.out.println(blockchainJson);
+        String blockchainJson = new GsonBuilder().setPrettyPrinting().create().toJson(blockchain);
+        System.out.println("current blockchain");
+        System.out.println(blockchainJson);
     }
 
     public static boolean isChainValid(){
@@ -38,7 +38,7 @@ public class rohChain {
             prevBlock = blockchain.get(i - 1);
 
             //checks if current block hash equals registered block hash
-            if(currentBlock.hash != currentBlock.calculateHash()){
+            if(!currentBlock.hash.equals(currentBlock.calculateHash())){
                 System.out.println("current hashes not equal");
                 return false;
             }
