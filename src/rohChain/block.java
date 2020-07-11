@@ -1,3 +1,5 @@
+package rohChain;
+
 import java.util.Date;
 
 public class block {
@@ -11,7 +13,7 @@ public class block {
     //private int nonce
 
 
-    //block constructor
+    //rohChain.rohChain.block constructor
     public block(String data, String prevHash){
         this.data = data;
         this.prevHash = prevHash;
@@ -31,7 +33,7 @@ public class block {
             hash = calculateHash();
             //System.out.println("mining");
         }
-        System.out.println("block mined, hash: " + hash);
+        System.out.println("rohChain.rohChain.block mined, hash: " + hash);
     }
 
 }

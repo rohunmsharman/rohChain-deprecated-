@@ -1,3 +1,5 @@
+package rohChain;
+
 import java.security.MessageDigest;
 
 //basically a carbon copy of http://www.baeldung.com/sha-256-hashing-java, just to has using SHA256

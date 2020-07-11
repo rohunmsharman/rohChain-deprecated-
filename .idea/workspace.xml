@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3818199a-0a54-47be-915b-340331b9a5d2" name="Default Changelist" comment="" />
+    <list default="true" id="3818199a-0a54-47be-915b-340331b9a5d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rohChain personal update log.rtf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rohChain/addMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rohChain/jsonEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rohChain/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rohChain/block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rohChain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rohChain/rohChain.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,12 +28,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1eQ0QKEO0GJEjUPMN9kSnyp3B6i" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -42,7 +56,7 @@
   </component>
   <component name="RunManager">
     <configuration name="rohChain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="rohChain" />
+      <option name="MAIN_CLASS_NAME" value="rohChain.rohChain" />
       <module name="rohChain" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -66,6 +80,9 @@
       <updated>1594238491685</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="721" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594321599221">
