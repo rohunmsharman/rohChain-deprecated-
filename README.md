@@ -1,7 +1,7 @@
 # rohChain.rohChain
  the rohun blockchain, in dev, don't get mad that I used to java, golang is harder than it looks.
  
- it will hopefully be a blockchain application that has p2p messaging and transactions. 
+i hope it will be a blockchain application that has p2p messaging and transactions. 
  
- the messaging and cryptocurreny are being built in separate branches, once both are functional they will be merged onto the master. 
+ the messaging portion of the chain exists because i am still figuring out how to make transactions work
  
