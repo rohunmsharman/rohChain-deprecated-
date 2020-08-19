@@ -2,15 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3818199a-0a54-47be-915b-340331b9a5d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rohChain personal update log.rtf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rohChain/addMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rohChain/jsonEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/monogodb_driver.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/bcprov_jdk15on_159.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mongodb_driver_3_0_4_javadoc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/kotlin-reflect-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/kotlin-reflect.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jdk7-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jdk7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jdk8-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jdk8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/kotlin-test-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/kotlin-test.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rohChain/txn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rohChain/txnIn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rohChain/txnOut.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rohChain/wallet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rohChain/StringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rohChain/block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rohChain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rohChain/rohChain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/rohChain/StringUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/rohChain/block.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/rohChain/rohChain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rohChain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rohChain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rohChain/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rohChain/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rohChain/jsonEncoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rohChain/rohChain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rohChain/rohChain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +38,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin File" />
         <option value="Class" />
       </list>
     </option>
@@ -46,8 +65,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -89,46 +109,57 @@
       <screen x="0" y="23" width="1792" height="1024" />
     </state>
     <state x="721" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1024@0.23.1792.1024" timestamp="1594321599221" />
-    <state width="1750" height="279" key="GridCell.Tab.0.bottom" timestamp="1594327683597">
-      <screen x="0" y="23" width="1792" height="1024" />
+    <state width="1750" height="279" key="GridCell.Tab.0.bottom" timestamp="1594579771885">
+      <screen x="0" y="23" width="1792" height="1026" />
     </state>
     <state width="854" height="279" key="GridCell.Tab.0.bottom/0.23.1792.1024@0.23.1792.1024" timestamp="1594321994033" />
+    <state width="1750" height="279" key="GridCell.Tab.0.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1594579771885" />
     <state width="1750" height="279" key="GridCell.Tab.0.bottom/1792.119.1366.1001/0.23.1792.1024@0.23.1792.1024" timestamp="1594327683597" />
-    <state width="1750" height="279" key="GridCell.Tab.0.center" timestamp="1594327683596">
-      <screen x="0" y="23" width="1792" height="1024" />
+    <state width="1750" height="279" key="GridCell.Tab.0.center" timestamp="1594579771884">
+      <screen x="0" y="23" width="1792" height="1026" />
     </state>
     <state width="854" height="279" key="GridCell.Tab.0.center/0.23.1792.1024@0.23.1792.1024" timestamp="1594321994032" />
+    <state width="1750" height="279" key="GridCell.Tab.0.center/0.23.1792.1026@0.23.1792.1026" timestamp="1594579771884" />
     <state width="1750" height="279" key="GridCell.Tab.0.center/1792.119.1366.1001/0.23.1792.1024@0.23.1792.1024" timestamp="1594327683596" />
-    <state width="1750" height="279" key="GridCell.Tab.0.left" timestamp="1594327683595">
-      <screen x="0" y="23" width="1792" height="1024" />
+    <state width="1750" height="279" key="GridCell.Tab.0.left" timestamp="1594579771884">
+      <screen x="0" y="23" width="1792" height="1026" />
     </state>
     <state width="854" height="279" key="GridCell.Tab.0.left/0.23.1792.1024@0.23.1792.1024" timestamp="1594321994031" />
+    <state width="1750" height="279" key="GridCell.Tab.0.left/0.23.1792.1026@0.23.1792.1026" timestamp="1594579771884" />
     <state width="1750" height="279" key="GridCell.Tab.0.left/1792.119.1366.1001/0.23.1792.1024@0.23.1792.1024" timestamp="1594327683595" />
-    <state width="1750" height="279" key="GridCell.Tab.0.right" timestamp="1594327683596">
-      <screen x="0" y="23" width="1792" height="1024" />
+    <state width="1750" height="279" key="GridCell.Tab.0.right" timestamp="1594579771885">
+      <screen x="0" y="23" width="1792" height="1026" />
     </state>
     <state width="854" height="279" key="GridCell.Tab.0.right/0.23.1792.1024@0.23.1792.1024" timestamp="1594321994033" />
+    <state width="1750" height="279" key="GridCell.Tab.0.right/0.23.1792.1026@0.23.1792.1026" timestamp="1594579771885" />
     <state width="1750" height="279" key="GridCell.Tab.0.right/1792.119.1366.1001/0.23.1792.1024@0.23.1792.1024" timestamp="1594327683596" />
-    <state x="521" y="145" key="SettingsEditor" timestamp="1594321856027">
-      <screen x="0" y="23" width="1792" height="1024" />
+    <state x="521" y="145" key="SettingsEditor" timestamp="1597863617564">
+      <screen x="0" y="23" width="1792" height="1028" />
     </state>
     <state x="521" y="145" key="SettingsEditor/0.23.1792.1024@0.23.1792.1024" timestamp="1594321856027" />
-    <state x="1021" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1594320477945">
-      <screen x="0" y="23" width="1792" height="1024" />
+    <state x="521" y="145" key="SettingsEditor/0.23.1792.1026@0.23.1792.1026" timestamp="1594512573404" />
+    <state x="521" y="145" key="SettingsEditor/0.23.1792.1028@0.23.1792.1028" timestamp="1597863617564" />
+    <state x="521" y="145" key="SettingsEditor/0.23.1792.1030@0.23.1792.1030" timestamp="1597862163628" />
+    <state x="1021" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1597861986010">
+      <screen x="0" y="23" width="1792" height="1030" />
     </state>
-    <state x="1021" y="367" key="com.intellij.ide.util.TipDialog/0.23.1792.1024@0.23.1792.1024" timestamp="1594320477945" />
-    <state x="737" y="464" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1594321849138">
-      <screen x="0" y="23" width="1792" height="1024" />
+    <state x="1021" y="367" key="com.intellij.ide.util.TipDialog/0.23.1792.1024@0.23.1792.1024" timestamp="1594760107219" />
+    <state x="1021" y="368" key="com.intellij.ide.util.TipDialog/0.23.1792.1026@0.23.1792.1026" timestamp="1597701731273" />
+    <state x="1021" y="369" key="com.intellij.ide.util.TipDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1597861986010" />
+    <state x="737" y="465" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1594512453461">
+      <screen x="0" y="23" width="1792" height="1026" />
     </state>
     <state x="737" y="464" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.23.1792.1024@0.23.1792.1024" timestamp="1594321849138" />
+    <state x="737" y="465" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.23.1792.1026@0.23.1792.1026" timestamp="1594512453461" />
     <state x="679" y="459" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594327933880">
       <screen x="0" y="23" width="1792" height="1024" />
     </state>
     <state x="679" y="459" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1792.119.1366.1001/0.23.1792.1024@0.23.1792.1024" timestamp="1594327933880" />
-    <state x="819" y="198" key="new project wizard" timestamp="1594321774011">
-      <screen x="0" y="23" width="1792" height="1024" />
+    <state x="360" y="200" key="new project wizard" timestamp="1594925794979">
+      <screen x="0" y="23" width="1792" height="1026" />
     </state>
-    <state x="819" y="198" key="new project wizard/0.23.1792.1024@0.23.1792.1024" timestamp="1594321774011" />
+    <state x="546" y="198" key="new project wizard/0.23.1792.1024@0.23.1792.1024" timestamp="1594760266100" />
+    <state x="360" y="200" key="new project wizard/0.23.1792.1026@0.23.1792.1026" timestamp="1594925794979" />
     <state x="1009" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1594321194601">
       <screen x="0" y="23" width="1792" height="1024" />
     </state>

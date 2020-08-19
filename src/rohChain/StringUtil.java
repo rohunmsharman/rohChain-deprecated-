@@ -1,6 +1,8 @@
 package rohChain;
 
 import java.security.MessageDigest;
+import java.security.*;
+import java.util.Base64;
 
 //basically a carbon copy of http://www.baeldung.com/sha-256-hashing-java, just to has using SHA256
 
@@ -26,5 +28,41 @@ public class StringUtil {
              throw new RuntimeException(e);
          }
     }
+
+    //returns EDCDSA sig
+    public static byte[] applyECDSASig(PrivateKey privateKey, String input){
+        Signature dsa;
+        byte[] output = new byte[0];
+        try{
+            dsa = Signature.getInstance("ECDSA", "BC");
+            dsa.initSign(privateKey);
+            byte[] strByte = input.getBytes();
+            dsa.update(strByte);
+            byte[] realSig = dsa.sign();
+            output = realSig;
+
+        }catch(Exception e){
+            throw new RuntimeException(e);
+        }
+        return output;
+    }
+
+    //verify String sig
+    public static boolean verifyECDSASig(PublicKey publicKey, String data, byte[] signature){
+        try {
+            Signature ecdsaVerify = Signature.getInstance("ECDSA", "BC");
+            ecdsaVerify.initVerify(publicKey);
+            ecdsaVerify.update(data.getBytes());
+            return ecdsaVerify.verify(signature);
+        } catch(Exception e){
+            throw new RuntimeException(e);
+        }
+    }
+
+    //encode key toString
+    public static String getStringFromKey(Key key){
+        return Base64.getEncoder().encodeToString(key.getEncoded());
+    }
+
 
 }
