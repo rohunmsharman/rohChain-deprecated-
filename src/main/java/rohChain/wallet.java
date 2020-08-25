@@ -38,9 +38,12 @@ public class wallet {
         //chekcs to see if publicKey of UTXO matches wallet publicKey, if they match the UTXO is added to the wallet.
         for(Map.Entry<String, txnOut> item: rohChain.UTXOs.entrySet()){
             txnOut UTXO = item.getValue();
+            System.out.println("UTXO:" + UTXO );
             if(UTXO.isMine(publicKey)){
+                //System.out.println(UTXO + "utxo for ")
                 UTXOs.put(UTXO.id, UTXO);
                 total += UTXO.value;
+
             }
         }
         return total;
@@ -48,7 +51,7 @@ public class wallet {
 
     //generates/returns new txn from this wallet
     public txn sendFunds(PublicKey _recipient, float value){
-        if(getBalance() < value){ //gateher balance and check funds
+        if(getBalance() < value){ //gather balance and check funds
             System.out.println("#not enough funds to send transaciton, tansaction discarded");
             return null;
         }

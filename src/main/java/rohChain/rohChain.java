@@ -40,6 +40,7 @@ public class rohChain {
         block genesis = new block("0");
         genesis.addTxn(genesisTxn);
         addBlock(genesis);
+        System.out.println("wallet b balance: " + walletB.getBalance());
         isChainValid();
 
         //testing
@@ -47,7 +48,7 @@ public class rohChain {
         System.out.println("\nWalletA's balance is: " + walletA.getBalance());
         System.out.println("\nWalletA is Attempting to send funds (40) to WalletB...");
 
-        //issue with send funds method
+        //ISSUE with send funds method
         block1.addTxn(walletA.sendFunds(walletB.publicKey, 40f));
         addBlock(block1);
         System.out.println("\nWalletA's balance is: " + walletA.getBalance());
@@ -61,12 +62,14 @@ public class rohChain {
         System.out.println("WalletB's balance is: " + walletB.getBalance());
 
          */
-
+        /*
         block block2 = new block(block1.hash);
         System.out.println("\nWalletB is Attempting to send funds (20) to WalletA...");
         block2.addTxn(walletB.sendFunds( walletA.publicKey, 20f));
         System.out.println("\nWalletA's balance is: " + walletA.getBalance());
         System.out.println("WalletB's balance is: " + walletB.getBalance());
+
+         */
 
         isChainValid();
 

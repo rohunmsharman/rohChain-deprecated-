@@ -78,8 +78,6 @@ public class txn {
         return total;
     }
 
-
-
     //sign txn
     public void genSig(PrivateKey privateKey){
         String data = StringUtil.getStringFromKey(sender) + StringUtil.getStringFromKey(recipient) + Float.toString(value);
