@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 
 public class addMessage {
+    /*
     //creates returns rohChain.rohChain.block w/ new messages and mines the rohChain.rohChain.block
     public static void addMessage() {
         String cont;
@@ -23,4 +24,6 @@ public class addMessage {
             cont = input.nextLine();
         }
     }
+
+     */
 }

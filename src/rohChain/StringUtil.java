@@ -3,6 +3,7 @@ package rohChain;
 import java.security.MessageDigest;
 import java.security.*;
 import java.util.Base64;
+import java.util.ArrayList;
 
 //basically a carbon copy of http://www.baeldung.com/sha-256-hashing-java, just to has using SHA256
 
@@ -64,5 +65,23 @@ public class StringUtil {
         return Base64.getEncoder().encodeToString(key.getEncoded());
     }
 
+    public static String getMerkleRoot(ArrayList<txn> txns){
+        int count = txns.size();
+        ArrayList<String> prevTreeLayer = new ArrayList<String>();
+        for(txn Txn : txns){
+            prevTreeLayer.add(Txn.txnId);
+        }
+        ArrayList<String> treeLayer = prevTreeLayer;
+        while(count > 1){
+            treeLayer = new ArrayList<String>();
+            for(int i = 1; i < prevTreeLayer.size(); i++){
+                treeLayer.add(applySha256(prevTreeLayer.get(i-1) + prevTreeLayer.get(i)));
+            }
+            count = treeLayer.size();
+            prevTreeLayer = treeLayer;
+        }
+        String merkleRoot = (treeLayer.size() == 1) ? treeLayer.get(0) : "";
+        return merkleRoot;
+    }
 
 }

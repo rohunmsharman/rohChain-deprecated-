@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 //  transactions will follow a basic UTXO design
 public class txn {
-    public String transacitonId; //hash of the transaction
+    public String txnId; //hash of the transaction
     public PublicKey sender; //sender address/pubKey
     public PublicKey recipient; //recipient address/pubKey
     public float value;
@@ -22,6 +22,64 @@ public class txn {
         this.value = value;
         this.inputs = inputs;
     }
+
+    //determines if new transaction should be created
+    public boolean processTxn(){
+        if(verifySignature() == false){
+            return false;
+        }
+        //gather txn inputs
+        for(txnIn i : inputs){
+            i.UTXO = rohChain.UTXOs.get(i.txnOutId);
+        }
+        //check if txn is valid
+        if(getInputsValue() < rohChain.minTxn){
+            System.out.println("#transaction too small: " + getInputsValue());
+            return false;
+
+        }
+
+        //generate txn outputs
+        float leftOver = getInputsValue() - value; //get left over inputs
+        txnId = calculateHash();
+        outputs.add(new txnOut(this.sender, leftOver, txnId)); // return leftover coin to sender
+        outputs.add(new txnOut(this.recipient, leftOver, txnId)); // send value to recipient
+
+        //add output to unspent list
+        for(txnOut o : outputs){
+            rohChain.UTXOs.put(o.id, o);
+        }
+
+        for(txnIn i : inputs){
+            if(i.UTXO == null) continue; // if txn can't be found: skip
+            rohChain.UTXOs.remove(i.UTXO.id);
+        }
+
+        return true;
+
+    }
+
+    //returns sum of input values
+    public float getInputsValue(){
+        float total = 0;
+        for(txnIn i : inputs){
+            if(i.UTXO == null) continue;
+            total += i.UTXO.value;
+        }
+        return total;
+    }
+
+    //returns sum of outputs
+    public float getOutputsVlaue(){
+        float total = 0;
+        for(txnOut o : outputs){
+            total += o.value;
+        }
+        return total;
+    }
+
+
+
     //sign txn
     public void genSig(PrivateKey privateKey){
         String data = StringUtil.getStringFromKey(sender) + StringUtil.getStringFromKey(recipient) + Float.toString(value);

@@ -1,11 +1,16 @@
 package rohChain;
 import java.security.*;
 import java.security.spec.ECGenParameterSpec;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.ArrayList;
 
 public class wallet {
     // pubKey is the address for the wallet
     public PublicKey publicKey;
     public PrivateKey privateKey;
+
+    public HashMap<String, txnOut> UTXOs = new HashMap<String, txnOut>(); //UTXOs return by respective wallet
 
     public wallet(){
         generateKeyPair();
@@ -26,5 +31,47 @@ public class wallet {
             throw new RuntimeException(e);
         }
     }
+
+    //returns balance and stores the UTXOs owned by this wallet in this.UTXOs
+    public float getBalance(){
+        float total = 0;
+        //chekcs to see if publicKey of UTXO matches wallet publicKey, if they match the UTXO is added to the wallet.
+        for(Map.Entry<String, txnOut> item: rohChain.UTXOs.entrySet()){
+            txnOut UTXO = item.getValue();
+            if(UTXO.isMine(publicKey)){
+                UTXOs.put(UTXO.id, UTXO);
+                total += UTXO.value;
+            }
+        }
+        return total;
+    }
+
+    //generates/returns new txn from this wallet
+    public txn sendFunds(PublicKey _recipient, float value){
+        if(getBalance() < value){ //gateher balance and check funds
+            System.out.println("#not enough funds to send transaciton, tansaction discarded");
+            return null;
+        }
+
+        //create an arrayList of inputs
+        ArrayList<txnIn> inputs = new ArrayList<txnIn>();
+
+        float total = 0;
+        for(Map.Entry<String, txnOut> item: UTXOs.entrySet()){
+            txnOut UTXO = item.getValue();
+            total += UTXO.value;
+            inputs.add(new txnIn(UTXO.id));
+            if(total > value) break;
+        }
+        txn newTxn = new txn(publicKey, _recipient, value, inputs);
+        newTxn.genSig(privateKey);
+
+        for(txnIn input: inputs){
+            UTXOs.remove(input.txnOutId);
+        }
+        return newTxn;
+
+    }
+
 
 }
