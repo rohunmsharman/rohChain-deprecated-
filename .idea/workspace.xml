@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3818199a-0a54-47be-915b-340331b9a5d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/roCore.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rohChain/client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rohChain/masterNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rohChain/node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mongodb_driver_3_0_4_javadoc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mongodb_driver_3_0_4_javadoc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rohChain/rohChain/StringUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rohChain/rohChain/addMessage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rohChain/rohChain/block.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rohChain/rohChain/rohChain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rohChain/rohChain/txn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rohChain/rohChain/txnIn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rohChain/rohChain/txnOut.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rohChain/rohChain/wallet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rohChain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rohChain.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rohChain/block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rohChain/block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rohChain/rohChain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rohChain/rohChain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/networking/jsonSimple.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/networking/peer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/networking/peerThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/networking/serverThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/networking/serverThreadThread.java" beforeDir="false" />
-    </list>
+    <list default="true" id="3818199a-0a54-47be-915b-340331b9a5d2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -270,12 +245,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/rohChain/rohChain.java</url>
-          <line>61</line>
+          <line>58</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/rohChain/rohChain.java</url>
-          <line>62</line>
+          <line>59</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
