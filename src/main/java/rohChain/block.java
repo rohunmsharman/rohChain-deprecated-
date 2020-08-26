@@ -1,9 +1,16 @@
 package rohChain;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.ArrayList;
 
-public class block {
+public class block implements Serializable {
+
+    private static final long serialVerisonUID = 2L;
+
     public String hash;
     public String prevHash;
     public String merkleRoot;
@@ -14,8 +21,6 @@ public class block {
 
     //to be added with proof of work
     //private int nonce
-
-
 
     //rohChain.rohChain.block constructor
     public block(String prevHash){
@@ -30,6 +35,8 @@ public class block {
         return calculatedHash;
     }
 
+
+    //will be moved to a separate class, multithreaded mining will be implemented.
     public void mineBlock(int difficulty){
         String target = new String(new char[difficulty]).replace('\0', '0');
         while(!hash.substring(0, difficulty).equals(target)){
@@ -53,6 +60,16 @@ public class block {
         System.out.println("txn successfull added to block");
         return true;
 
+    }
+
+    public void writeObject(ObjectOutputStream oos)throws IOException{
+        System.out.println("custom serialization logic invoked ");
+        oos.defaultWriteObject(); //calls default serializaiton logic
+    }
+
+    public void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException {
+        System.out.println("custom deserialization logic invoked");
+        ois.defaultReadObject();
     }
 
 }

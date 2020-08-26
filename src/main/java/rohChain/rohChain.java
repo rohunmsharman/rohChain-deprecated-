@@ -1,14 +1,18 @@
 package rohChain; //created by rohun sharman (with help from the internet)
 
+import java.io.Serializable;
 import java.util.ArrayList;
 //import com.mongodb.client;
+import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.security.Security;
 import java.util.HashMap;
 
-public class rohChain {
+
+// MIGRATE TO MASTER NDOE
+public class rohChain implements Serializable {
 
     public static ArrayList<block> rChain = new ArrayList<block>();
     public static HashMap<String, txnOut> UTXOs = new HashMap<String, txnOut>();
@@ -19,9 +23,13 @@ public class rohChain {
     public static wallet walletB;
     public static txn genesisTxn;
 
+
     public static void main(String[] args){
         //bouncy castle security provider
         Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+
+        //serialize blocks with Gson
+
 
         //create test wallets
         walletA = new wallet();
@@ -53,6 +61,8 @@ public class rohChain {
         addBlock(block1);
         System.out.println("\nWalletA's balance is: " + walletA.getBalance());
         System.out.println("WalletB's balance is: " + walletB.getBalance());
+
+
         /*
         block block2 = new block(block1.hash);
         System.out.println("\nWalletA Attempting to send more funds (1000) than it has...");
@@ -102,12 +112,17 @@ public class rohChain {
          */
     }
 
-    //adds genesis rohChain.rohChain.block and mines it
+
+    //deprecated
     public static void genesisBlock(){
 
     }
 
 
+    //works through all transactions on the chain to make sure UTXO list is correct
+    public static boolean fullChainValidity(){
+        return false;
+    }
 
     public static boolean isChainValid(){
         block currentBlock;
