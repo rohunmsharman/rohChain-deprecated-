@@ -1,9 +1,13 @@
 package rohChain;
+import java.io.Serializable;
 import java.security.*;
 import java.util.ArrayList;
 
+
 //  transactions will follow a basic UTXO design
-public class txn {
+public class txn implements Serializable {
+    private static final long serialVerisonUID = 2L;
+
     public String txnId; //hash of the transaction
     public PublicKey sender; //sender address/pubKey
     public PublicKey recipient; //recipient address/pubKey

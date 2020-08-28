@@ -14,8 +14,8 @@
     <orderEntry type="library" name="com.google.code.gson:gson:2.8.6" level="project" />
     <orderEntry type="library" name="mongodb-driver-3.0.4-javadoc" level="project" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
-    <orderEntry type="library" name="bcprov-jdk15on-159" level="project" />
     <orderEntry type="library" name="json-simple-1.1.1" level="project" />
     <orderEntry type="library" name="javax.json-1.1.4" level="project" />
+    <orderEntry type="library" name="bcprov-jdk15on-166" level="project" />
   </component>
 </module>

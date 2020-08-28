@@ -17,7 +17,7 @@ public class block implements Serializable {
     public ArrayList<txn> txns = new ArrayList<txn>();
     //private String data;  // literally a small message, have yet to implement coin
     private long timeStamp;
-    private int nonce = 0;
+    public static int nonce = 0;
 
     //to be added with proof of work
     //private int nonce
@@ -36,7 +36,8 @@ public class block implements Serializable {
     }
 
 
-    //will be moved to a separate class, multithreaded mining will be implemented.
+    //moved to masterNode
+
     public void mineBlock(int difficulty){
         String target = new String(new char[difficulty]).replace('\0', '0');
         while(!hash.substring(0, difficulty).equals(target)){
@@ -46,6 +47,8 @@ public class block implements Serializable {
         }
         System.out.println("block " + hash + " mined");
     }
+
+
 
     public boolean addTxn(txn Txn){
         //process txn, determine txn validity, exception for genesis block

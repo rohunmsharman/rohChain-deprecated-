@@ -2,7 +2,7 @@ package rohChain; //created by rohun sharman (with help from the internet)
 
 import java.io.Serializable;
 import java.util.ArrayList;
-//import com.mongodb.client;
+import com.mongodb.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.util.ArrayList;
@@ -14,23 +14,26 @@ import java.util.HashMap;
 // MIGRATE TO MASTER NDOE
 public class rohChain implements Serializable {
 
+    //will move to mongodb with verificatio method
     public static ArrayList<block> rChain = new ArrayList<block>();
+
     public static HashMap<String, txnOut> UTXOs = new HashMap<String, txnOut>();
 
     public static int difficulty = 3;
     public static float minTxn = 0.1f;
+    /*
     public static wallet walletA;
     public static wallet walletB;
     public static txn genesisTxn;
+
+     */
 
 
     public static void main(String[] args){
         //bouncy castle security provider
         Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
 
-        //serialize blocks with Gson
-
-
+        /*
         //create test wallets
         walletA = new wallet();
         walletB = new wallet();
@@ -61,6 +64,8 @@ public class rohChain implements Serializable {
         addBlock(block1);
         System.out.println("\nWalletA's balance is: " + walletA.getBalance());
         System.out.println("WalletB's balance is: " + walletB.getBalance());
+
+         */
 
 
         /*
@@ -201,10 +206,13 @@ public class rohChain implements Serializable {
         return true;
     }
 
+
     public static void addBlock(block newBlock){
         newBlock.mineBlock(difficulty);
         rChain.add(newBlock);
     }
+
+
 
 
 
