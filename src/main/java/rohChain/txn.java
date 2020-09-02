@@ -47,7 +47,9 @@ public class txn implements Serializable {
         float leftOver = getInputsValue() - value; //get left over inputs
         txnId = calculateHash();
         outputs.add(new txnOut(this.sender, leftOver, txnId)); // return leftover coin to sender
-        outputs.add(new txnOut(this.recipient, leftOver, txnId)); // send value to recipient
+
+        outputs.add(new txnOut(this.recipient, value, txnId)); // send value to recipient :::::THIS IS WHERE THAT STUPID SPENDING BUG WAS, CHECK TXNS ASAP
+
 
         //add output to unspent list
         for(txnOut o : outputs){
@@ -74,7 +76,7 @@ public class txn implements Serializable {
     }
 
     //returns sum of outputs
-    public float getOutputsVlaue(){
+    public float getOutputsValue(){
         float total = 0;
         for(txnOut o : outputs){
             total += o.value;
@@ -87,6 +89,9 @@ public class txn implements Serializable {
         String data = StringUtil.getStringFromKey(sender) + StringUtil.getStringFromKey(recipient) + Float.toString(value);
         signature = StringUtil.applyECDSASig(privateKey, data);
     }
+
+
+
 
     //verify txn sig
     public boolean verifySignature(){

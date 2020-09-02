@@ -1,15 +1,18 @@
 package rohChain;
 
 //import org.json.*;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.security.Security;
+import java.security.*;
 //import java.net.serverSocket;
+import java.security.spec.ECGenParameterSpec;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
 import com.mongodb.*;
+import org.bouncycastle.util.IPAddress;
 //import org.mongodb.*;
 import javax.xml.crypto.Data;
 import java.io.*;
@@ -28,7 +31,17 @@ public class masterNode {
 
     //public static Set<String> names = new HashSet<>(); // all node names, check for duplicates upon registraction
     //public static HashMap nodes = new HashMap();
+    //list of known nodes has to be stored in a database, setup basic networking, then create separate classes
+    //ip address and socket number
+    public static HashMap<InetAddress, Integer> knownNodes = new HashMap<InetAddress, Integer>(); //SWTICH TO MONGODB SERVER when pacakged for serparate network test
 
+    public static String nodeName;
+    public static int port;
+    public static InetAddress address;
+
+    public static PublicKey nodePubKey;
+    private static PrivateKey nodePrivKey;
+    public byte[] nodeConfirmation; // node confirmation signature
 
     //public static Socket node = null;
     public static ObjectOutputStream out = null;
@@ -39,9 +52,14 @@ public class masterNode {
     public static wallet coinbase;
 
 
+    public masterNode(String nodeName, int port, InetAddress address){
+        this.nodeName = nodeName;
+        this.port = port;
+        this.address = address;
 
-    public static ArrayList<block> localChain = new ArrayList<block>();
+    }
 
+    //get rid of main
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
 
@@ -101,13 +119,62 @@ public class masterNode {
 
     }
 
+    public void generateKeyPair(){
 
-
-    public static void addBlock(block newBlock){
-        newBlock.mineBlock(difficulty);
-        rChain.add(newBlock);
+        try{
+            Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+            KeyPairGenerator keyGen = KeyPairGenerator.getInstance("ECDSA", "BC");
+            SecureRandom random = SecureRandom.getInstance("SHA1PRNG");
+            ECGenParameterSpec ecSpec = new ECGenParameterSpec("prime192v1");
+            // initiate keyGen and generate keyPair
+            KeyPair keyPair = keyGen.generateKeyPair();
+            // set pub/priv keys
+            nodePrivKey = keyPair.getPrivate();
+            nodePubKey = keyPair.getPublic();
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
     }
-    //activates node as server
+
+    public void mineBlock(block block){
+        int difficulty = rohChain.difficulty;
+        String target = new String(new char[difficulty]).replace('\0', '0');
+        while(!block.hash.substring(0, difficulty).equals(target)){
+            block.nonce++;
+            block.hash = block.calculateHash();
+            //System.out.println("mining");
+        }
+        System.out.println("block " + block.hash + " mined");
+    }
+
+    //takes node private key
+    public void genConfirmation(PrivateKey privateKey, txn TXN){
+        String txnInfo = TXN.txnId + StringUtil.getStringFromKey(nodePubKey);
+        nodeConfirmation = StringUtil.applyECDSASig(privateKey, txnInfo);
+    }
+
+    //takes block and converts it into a bson document to be sent to the block db
+    public static BasicDBObject bsonBlock(block block){
+        BasicDBObject docBlock = new BasicDBObject();
+        //temp to be changed
+        docBlock.put("hash:", block.hash);
+        docBlock.put("prevHash:", block.prevHash);
+        docBlock.put("merkleRoot:", block.merkleRoot);
+        //tbd
+        for(int i = 0; i < block.txns.size(); i++){
+            docBlock.put("txn" + i, block.txns.get(i));
+        }
+
+        //collection.insert(docBlock);
+
+        return docBlock;
+    }
+}
+
+
+
+    //activates node as server: depracated test
+    /*
     public static void activateNode() throws IOException {
         System.out.println("node is live...");
         var pool = Executors.newFixedThreadPool(500);
@@ -141,58 +208,9 @@ public class masterNode {
         }
     }
 
+     */
 
-
-    //broadcasts a block
-    public void broadcastBlock(block sentBlock){
-        try{
-           // out.writeObject(sentBlock);
-        }catch (Exception e){
-
-        }
-    }
-
-    //boradcasts a txn
-    public void broadcastTXN(txn sentTxn){
-        try{
-            //out.writeObject(sentTxn);
-
-        }catch (Exception e){
-
-        }
-    }
-
-    public void mineBlock(block block){
-        int difficulty = rohChain.difficulty;
-        String target = new String(new char[difficulty]).replace('\0', '0');
-        while(!block.hash.substring(0, difficulty).equals(target)){
-            block.nonce++;
-            block.hash = block.calculateHash();
-            //System.out.println("mining");
-        }
-        System.out.println("block " + block.hash + " mined");
-    }
-
-
-    //takes block and converts it into a bson document to be sent to the block db
-    public static BasicDBObject bsonBlock(block block){
-        BasicDBObject docBlock = new BasicDBObject();
-        //temp to be changed
-        docBlock.put("hash:", block.hash);
-        docBlock.put("prevHash:", block.prevHash);
-        docBlock.put("merkleRoot:", block.merkleRoot);
-        //tbd
-        for(int i = 0; i < block.txns.size(); i++){
-            docBlock.put("txn" + i, block.txns.get(i));
-        }
-
-        //collection.insert(docBlock);
-
-        return docBlock;
-    }
-
-}
-
+/*
 class nodeHandler extends Thread{
     block sendBlock;
     ObjectOutputStream out;
@@ -212,14 +230,15 @@ class nodeHandler extends Thread{
     public void run(){
         String received;
         String toreturn;
-        block outBlock = new block("0"); // temporary, will change after i figure out broadcasting
+        //block outBlock;  // temporary, will change after i figure out broadcasting
         txn outTxn;
 
         while(true){
             Scanner in1 = new Scanner(System.in);
-            System.out.println("broadcast block or txn (mine)");
+            System.out.println("broadcast block or txn");
             String choice = in1.nextLine();
             switch(choice){
+                /*
                 case "block":
                     try{
                         out = new ObjectOutputStream(s.getOutputStream());
@@ -233,35 +252,11 @@ class nodeHandler extends Thread{
 
                         //receive answer from node
                         //received = dis.readUTF();
-                /*
-                if(received.equals("exit")){
-                    System.out.println("node "+ this.s + " sends exit...");
-                    System.out.println("closing connection");
-                    this.s.close();
-                    break;
-                }
 
-                //create date object
-                Date date = new Date();
-
-                //write on output stream based on the answer from the client
-                switch(received){
-                    case "date" :
-                        toreturn = fordate.format(date);
-                        dos.writeUTF(toreturn);
-                        break;
-                    case "time" :
-                        toreturn = fortime.format(date);
-                        dos.writeUTF(toreturn);
-                        break;
-                    default:
-                        dos.writeUTF("invalid input");
-                        break;
-                }
-
-                 */
                     } catch (IOException e) { e.printStackTrace(); }
                     break;
+
+
 
                 case "txn":
                     try{
@@ -290,4 +285,5 @@ class nodeHandler extends Thread{
     }
 
 }
+*/
 

@@ -2,11 +2,6 @@ package rohChain; //created by rohun sharman (with help from the internet)
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import com.mongodb.*;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import java.util.ArrayList;
-import java.util.Base64;
 import java.security.Security;
 import java.util.HashMap;
 
@@ -17,6 +12,7 @@ public class rohChain implements Serializable {
     //will move to mongodb with verificatio method
     public static ArrayList<block> rChain = new ArrayList<block>();
 
+    //UTXO stored as <txnID, txn amount> , txn contains pubKey of sender and recipient, thus a check can be made during processing.
     public static HashMap<String, txnOut> UTXOs = new HashMap<String, txnOut>();
 
     public static int difficulty = 3;
@@ -166,7 +162,7 @@ public class rohChain implements Serializable {
                     System.out.println("# signature on txn(" + t + ") is invalid");
                     return false;
                 }
-                if (currentTxn.getInputsValue() != currentTxn.getOutputsVlaue()){
+                if (currentTxn.getInputsValue() != currentTxn.getOutputsValue()){
                     System.out.println("#inputs are not equal to outputs in txn(" + t + ")");
                     return false;
                 }

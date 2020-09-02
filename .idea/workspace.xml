@@ -2,27 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3818199a-0a54-47be-915b-340331b9a5d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/bcprov_jdk15on_166.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rohChain/cli.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/bcprov_jdk15on_159.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javax_json_1_1_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/javax_json_1_1_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/json_simple_1_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/json_simple_1_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mongodb_driver_3_0_4_javadoc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mongodb_driver_3_0_4_javadoc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rohChain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rohChain.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rohChain/block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rohChain/block.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rohChain/masterNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rohChain/masterNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rohChain/node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rohChain/node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rohChain/node.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rohChain/rohChain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rohChain/rohChain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rohChain/txn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rohChain/txn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rohChain/txnIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rohChain/txnIn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rohChain/wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rohChain/wallet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rohChain/block.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rohChain/block.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rohChain/client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rohChain/masterNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rohChain/masterNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rohChain/node.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rohChain/node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rohChain/rohChain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rohChain/rohChain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rohChain/txn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rohChain/txn.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +55,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -200,58 +187,58 @@
       <screen x="0" y="23" width="1792" height="1026" />
     </state>
     <state x="968" y="138" key="CommitChangelistDialog2/0.23.1792.1026@0.23.1792.1026" timestamp="1597867650976" />
-    <state width="723" height="464" key="GridCell.Tab.0.bottom" timestamp="1598639513435">
+    <state width="1144" height="470" key="GridCell.Tab.0.bottom" timestamp="1599070044621">
       <screen x="0" y="23" width="3440" height="1334" />
     </state>
     <state width="854" height="279" key="GridCell.Tab.0.bottom/0.23.1792.1024@0.23.1792.1024" timestamp="1594321994033" />
     <state width="854" height="279" key="GridCell.Tab.0.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1597880890384" />
     <state width="854" height="2" key="GridCell.Tab.0.bottom/0.23.1792.1028@0.23.1792.1028" timestamp="1598378292125" />
-    <state width="723" height="464" key="GridCell.Tab.0.bottom/0.23.3440.1334@0.23.3440.1334" timestamp="1598639513435" />
+    <state width="1144" height="470" key="GridCell.Tab.0.bottom/0.23.3440.1334@0.23.3440.1334" timestamp="1599070044621" />
     <state width="1750" height="279" key="GridCell.Tab.0.bottom/1792.119.1366.1001/0.23.1792.1024@0.23.1792.1024" timestamp="1594327683597" />
-    <state width="723" height="464" key="GridCell.Tab.0.center" timestamp="1598639513435">
+    <state width="1144" height="470" key="GridCell.Tab.0.center" timestamp="1599070044618">
       <screen x="0" y="23" width="3440" height="1334" />
     </state>
     <state width="854" height="279" key="GridCell.Tab.0.center/0.23.1792.1024@0.23.1792.1024" timestamp="1594321994032" />
     <state width="854" height="279" key="GridCell.Tab.0.center/0.23.1792.1026@0.23.1792.1026" timestamp="1597880890384" />
     <state width="854" height="2" key="GridCell.Tab.0.center/0.23.1792.1028@0.23.1792.1028" timestamp="1598378292124" />
-    <state width="723" height="464" key="GridCell.Tab.0.center/0.23.3440.1334@0.23.3440.1334" timestamp="1598639513435" />
+    <state width="1144" height="470" key="GridCell.Tab.0.center/0.23.3440.1334@0.23.3440.1334" timestamp="1599070044618" />
     <state width="1750" height="279" key="GridCell.Tab.0.center/1792.119.1366.1001/0.23.1792.1024@0.23.1792.1024" timestamp="1594327683596" />
-    <state width="723" height="464" key="GridCell.Tab.0.left" timestamp="1598639513434">
+    <state width="1144" height="470" key="GridCell.Tab.0.left" timestamp="1599070044618">
       <screen x="0" y="23" width="3440" height="1334" />
     </state>
     <state width="854" height="279" key="GridCell.Tab.0.left/0.23.1792.1024@0.23.1792.1024" timestamp="1594321994031" />
     <state width="854" height="279" key="GridCell.Tab.0.left/0.23.1792.1026@0.23.1792.1026" timestamp="1597880890384" />
     <state width="854" height="2" key="GridCell.Tab.0.left/0.23.1792.1028@0.23.1792.1028" timestamp="1598378292124" />
-    <state width="723" height="464" key="GridCell.Tab.0.left/0.23.3440.1334@0.23.3440.1334" timestamp="1598639513434" />
+    <state width="1144" height="470" key="GridCell.Tab.0.left/0.23.3440.1334@0.23.3440.1334" timestamp="1599070044618" />
     <state width="1750" height="279" key="GridCell.Tab.0.left/1792.119.1366.1001/0.23.1792.1024@0.23.1792.1024" timestamp="1594327683595" />
-    <state width="723" height="464" key="GridCell.Tab.0.right" timestamp="1598639513435">
+    <state width="1144" height="470" key="GridCell.Tab.0.right" timestamp="1599070044618">
       <screen x="0" y="23" width="3440" height="1334" />
     </state>
     <state width="854" height="279" key="GridCell.Tab.0.right/0.23.1792.1024@0.23.1792.1024" timestamp="1594321994033" />
     <state width="854" height="279" key="GridCell.Tab.0.right/0.23.1792.1026@0.23.1792.1026" timestamp="1597880890384" />
     <state width="854" height="2" key="GridCell.Tab.0.right/0.23.1792.1028@0.23.1792.1028" timestamp="1598378292125" />
-    <state width="723" height="464" key="GridCell.Tab.0.right/0.23.3440.1334@0.23.3440.1334" timestamp="1598639513435" />
+    <state width="1144" height="470" key="GridCell.Tab.0.right/0.23.3440.1334@0.23.3440.1334" timestamp="1599070044618" />
     <state width="1750" height="279" key="GridCell.Tab.0.right/1792.119.1366.1001/0.23.1792.1024@0.23.1792.1024" timestamp="1594327683596" />
-    <state x="790" y="338" key="SettingsEditor" timestamp="1598561694187">
+    <state x="790" y="338" key="SettingsEditor" timestamp="1599069850921">
       <screen x="0" y="23" width="3440" height="1334" />
     </state>
     <state x="521" y="145" key="SettingsEditor/0.23.1792.1024@0.23.1792.1024" timestamp="1594321856027" />
     <state x="521" y="145" key="SettingsEditor/0.23.1792.1026@0.23.1792.1026" timestamp="1594512573404" />
     <state x="521" y="145" key="SettingsEditor/0.23.1792.1028@0.23.1792.1028" timestamp="1597863617564" />
     <state x="521" y="145" key="SettingsEditor/0.23.1792.1030@0.23.1792.1030" timestamp="1597862163628" />
-    <state x="790" y="338" key="SettingsEditor/0.23.3440.1334@0.23.3440.1334" timestamp="1598561694187" />
+    <state x="790" y="338" key="SettingsEditor/0.23.3440.1334@0.23.3440.1334" timestamp="1599069850921" />
     <state x="944" y="276" key="Vcs.Push.Dialog.v2" timestamp="1597867654759">
       <screen x="0" y="23" width="1792" height="1026" />
     </state>
     <state x="944" y="276" key="Vcs.Push.Dialog.v2/0.23.1792.1026@0.23.1792.1026" timestamp="1597867654759" />
-    <state x="1960" y="471" key="com.intellij.ide.util.TipDialog" timestamp="1598620703893">
-      <screen x="0" y="23" width="3440" height="1334" />
+    <state x="1021" y="368" key="com.intellij.ide.util.TipDialog" timestamp="1599063131694">
+      <screen x="0" y="23" width="1792" height="1026" />
     </state>
     <state x="1021" y="367" key="com.intellij.ide.util.TipDialog/0.23.1792.1024@0.23.1792.1024" timestamp="1594760107219" />
-    <state x="1021" y="368" key="com.intellij.ide.util.TipDialog/0.23.1792.1026@0.23.1792.1026" timestamp="1598293294429" />
+    <state x="1021" y="368" key="com.intellij.ide.util.TipDialog/0.23.1792.1026@0.23.1792.1026" timestamp="1599063131694" />
     <state x="1021" y="368" key="com.intellij.ide.util.TipDialog/0.23.1792.1028@0.23.1792.1028" timestamp="1598374413666" />
     <state x="1021" y="369" key="com.intellij.ide.util.TipDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1597861986010" />
-    <state x="1960" y="471" key="com.intellij.ide.util.TipDialog/0.23.3440.1334@0.23.3440.1334" timestamp="1598620703893" />
+    <state x="1960" y="471" key="com.intellij.ide.util.TipDialog/0.23.3440.1334@0.23.3440.1334" timestamp="1598686467180" />
     <state x="737" y="465" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1594512453461">
       <screen x="0" y="23" width="1792" height="1026" />
     </state>
@@ -264,14 +251,22 @@
     <state x="679" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1028@0.23.1792.1028" timestamp="1598378396674" />
     <state x="1303" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.3440.1334@0.23.3440.1334" timestamp="1598381606841" />
     <state x="679" y="459" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1792.119.1366.1001/0.23.1792.1024@0.23.1792.1024" timestamp="1594327933880" />
-    <state x="0" y="23" width="1720" height="1334" key="dock-window-1" timestamp="1598633201659">
+    <state x="0" y="23" width="1720" height="667" key="dock-window-1" timestamp="1599064551488">
       <screen x="0" y="23" width="3440" height="1334" />
     </state>
-    <state x="0" y="23" width="1720" height="1334" key="dock-window-1/0.23.3440.1334@0.23.3440.1334" timestamp="1598633201659" />
-    <state x="0" y="23" width="1720" height="687" key="dock-window-2" timestamp="1598627652698">
+    <state x="0" y="23" width="1720" height="667" key="dock-window-1/0.23.3440.1334@0.23.3440.1334" timestamp="1599064551488" />
+    <state x="0" y="690" width="1719" height="667" key="dock-window-2" timestamp="1599064551489">
       <screen x="0" y="23" width="3440" height="1334" />
     </state>
-    <state x="0" y="23" width="1720" height="687" key="dock-window-2/0.23.3440.1334@0.23.3440.1334" timestamp="1598627652698" />
+    <state x="0" y="690" width="1719" height="667" key="dock-window-2/0.23.3440.1334@0.23.3440.1334" timestamp="1599064551489" />
+    <state x="0" y="23" width="1720" height="1333" key="dock-window-3" timestamp="1599065798261">
+      <screen x="0" y="23" width="3440" height="1334" />
+    </state>
+    <state x="0" y="23" width="1720" height="1333" key="dock-window-3/0.23.3440.1334@0.23.3440.1334" timestamp="1599065798261" />
+    <state x="0" y="23" width="1720" height="1334" key="dock-window-4" timestamp="1599067715545">
+      <screen x="0" y="23" width="3440" height="1334" />
+    </state>
+    <state x="0" y="23" width="1720" height="1334" key="dock-window-4/0.23.3440.1334@0.23.3440.1334" timestamp="1599067715545" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1598565122845">
       <screen x="0" y="23" width="3440" height="1334" />
     </state>
@@ -297,26 +292,28 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/rohChain/rohChain.java</url>
-          <line>61</line>
+          <line>57</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/rohChain/rohChain.java</url>
-          <line>62</line>
+          <line>58</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/rohChain/masterNode.java</url>
-          <line>184</line>
-          <option name="timeStamp" value="10" />
+          <url>file://$PROJECT_DIR$/src/main/java/rohChain/txn.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/rohChain/block.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/rohChain/masterNode.java</url>
-          <line>177</line>
-          <properties class="rohChain.masterNode" method="bsonBlock">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="11" />
+          <line>63</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

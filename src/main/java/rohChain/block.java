@@ -7,22 +7,24 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.ArrayList;
 
+//block creation needs to be automated
+
 public class block implements Serializable {
 
     private static final long serialVerisonUID = 2L;
 
     public String hash;
     public String prevHash;
-    public String merkleRoot;
     public ArrayList<txn> txns = new ArrayList<txn>();
+    public String merkleRoot = StringUtil.getMerkleRoot(txns);
     //private String data;  // literally a small message, have yet to implement coin
     private long timeStamp;
     public static int nonce = 0;
 
-    //to be added with proof of work
-    //private int nonce
 
-    //rohChain.rohChain.block constructor
+
+
+    //block constructor
     public block(String prevHash){
         //this.data = data;
         this.prevHash = prevHash;

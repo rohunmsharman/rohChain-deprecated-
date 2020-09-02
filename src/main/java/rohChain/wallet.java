@@ -54,7 +54,7 @@ public class wallet {
     //generates/returns new txn from this wallet
     public txn sendFunds(PublicKey _recipient, float value){
         if(getBalance() < value){ //gather balance and check funds
-            System.out.println("#not enough funds to send transaciton, tansaction discarded");
+            System.out.println("#not enough funds to send transaction, transaction discarded");
             return null;
         }
 
