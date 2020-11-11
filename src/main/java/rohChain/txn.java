@@ -1,4 +1,8 @@
 package rohChain;
+/**
+ * Txn structure, methods here will also be called by nodes
+ */
+
 import java.io.Serializable;
 import java.security.*;
 import java.util.ArrayList;

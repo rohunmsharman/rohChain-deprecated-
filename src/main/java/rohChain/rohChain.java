@@ -1,4 +1,8 @@
-package rohChain; //created by rohun sharman (with help from the internet)
+package rohChain; //created by rohun sharman
+/**
+ * this is the code for the blockchain
+ * Methods here will be called by nodes to verify or add to the blockchain.
+ */
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -6,7 +10,6 @@ import java.security.Security;
 import java.util.HashMap;
 
 
-// MIGRATE TO MASTER NDOE
 public class rohChain implements Serializable {
 
     //will move to mongodb with verificatio method

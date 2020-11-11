@@ -1,4 +1,7 @@
 package rohChain;
+/**
+ * StringUtil  provides sha256 hashes, signature methods, and merkle roots.
+ */
 
 import java.security.MessageDigest;
 import java.security.*;

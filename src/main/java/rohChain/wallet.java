@@ -1,4 +1,8 @@
 package rohChain;
+/**
+ * Local wallet class, will be edited to be instantiated with each node.
+ */
+
 import java.security.*;
 import java.security.spec.ECGenParameterSpec;
 import java.util.HashMap;
