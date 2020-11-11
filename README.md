@@ -1,6 +1,5 @@
 # roCoin
-
-basic cyrptocurrency. not functional yet.
+simple cryptocurrency. not functional yet.
 
 
 
