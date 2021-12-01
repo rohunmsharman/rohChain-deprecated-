@@ -1,6 +1,6 @@
 # roCoinOLD
-poorly written classes that just got worse over time, but a suprising good template for writing tests
+first attempt at writing roCoin, uploaded wel after most of it was written. 
 
-
+exists as reference for blockchain logic and transaction structure because I was understood Java better than Golang. 
 
 
